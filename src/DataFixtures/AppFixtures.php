@@ -47,8 +47,8 @@ class AppFixtures extends Fixture
             for ($a=0; $a < random_int(5, 15); $a++) { 
                 # code...
                 $post = (new Post)->setAuthor($fake->name)
-                                        ->setContent($fake->text(maxNbChars: 300))
-                                        ->setTitle($fake->title)
+                                        ->setContent($fake->text(maxNbChars: 1000))
+                                        ->setTitle($fake->text(maxNbChars: 25))
                                         ->setImage($fake->imageUrl(640, 480, null, true))
                                         ->setCreatedAt(new DateTimeImmutable());
 
